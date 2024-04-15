@@ -74,3 +74,28 @@
       @apply bg-background text-foreground;
     }
   }
+
+
+#root{
+  background-color: white;
+}
+.navbar{
+  background-color: #F9F9F9;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5% 0;
+}
+
+.navItem{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  font-weight: 500;
+  font-size: large;
+}
