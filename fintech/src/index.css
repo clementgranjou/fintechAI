@@ -77,7 +77,7 @@
 
 
 #root{
-  background-color: white;
+  background-color: #F9F9F9;
 }
 .navbar{
   background-color: #F9F9F9;
@@ -98,4 +98,18 @@
 .title{
   font-weight: 500;
   font-size: large;
+}
+
+.container{
+  padding: 2em;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbaricon{
+  font-size: 180%;
+  color: black;
 }
