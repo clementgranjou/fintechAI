@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import LogoutButton from "../components/Logout";
 
 // shadcn components
 import {
@@ -16,8 +17,12 @@ import { Button } from "@/components/ui/button";
 // icons
 import { HiMiniAdjustmentsHorizontal, HiMiniCursorArrowRays } from "react-icons/hi2";
 
+
+
+
 export default function Home() {
   const [transactions, setTransactions] = useState([]);
+  const [total, setTotal] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -36,6 +41,23 @@ export default function Home() {
       .catch((error) => {
         setError(error.message);
         setIsLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/transactions/sum")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setTotal(data.sum);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setError(error.message);
       });
   }, []);
 
@@ -61,17 +83,17 @@ export default function Home() {
         </Avatar>
       </div>
       <div className="header">
-        <h3 className="text-slate-800">Solde de tout compte</h3>
+        <h3 className="text-slate-800 font-medium">Solde de tout compte</h3>
         <h3 className="text-slate-400">1 compte connecté</h3>
       </div>
-      <h1 className="text-slate-800 text-3xl font-semibold">$3000.89</h1>
+      <h1 className="text-slate-800 text-3xl font-semibold">{total}$</h1>
 
       <div className="grid gap-2">
         <div className="header">
-          <h3 className="text-slate-800">Suivi des opérations</h3>
+          <h3 className="text-slate-800 font-medium">Suivi des opérations</h3>
           <HiMiniAdjustmentsHorizontal />
         </div>
-        <Button className="w-full bg-violet-700 text-slate-50 font-normal gap-x-8">Conseiller moi<HiMiniCursorArrowRays/></Button>
+        <Button className="w-full flex justify-between bg-slate-200 text-slate-800 hover:text-slate-200 font-normal">Dashboard d'analyse<HiMiniCursorArrowRays/></Button>
       </div>
 
       <Table>
@@ -87,19 +109,20 @@ export default function Home() {
         <TableBody>
           {transactions.map((transaction) => (
             <TableRow key={transaction.transactionid}>
-              <TableCell className="font-bold">
+              <TableCell className="text-sm font-bold">
                 {transaction.transactionid}
               </TableCell>
-              <TableCell>{transaction.amount} USD</TableCell>
-              <TableCell>{formatDate(transaction.transactiondate)}</TableCell>
+              <TableCell className="text-sm">{transaction.amount}USD</TableCell>
+              <TableCell className="text-sm">{formatDate(transaction.transactiondate)}</TableCell>
               <TableCell>
                 <Badge variant="outline">{transaction.status}</Badge>
               </TableCell>
-              <TableCell>{transaction.description}</TableCell>
+              <TableCell className="text-sm">{transaction.description}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
+      <LogoutButton></LogoutButton>
     </div>
   );
 }
