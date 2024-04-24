@@ -17,20 +17,20 @@ export default function Chatbot() {
         </Avatar>
       </div>
       <div className="grid gap-2">
-        <div className="w-full border border-slate-100 px-4 py-4 text-sm rounded-md flex flex-row justify-between items-center	 bg-white border-slate-900">
-          <p className="text-slate-600">
+        <div className="w-full border px-4 py-4 bg-slate-50 text-sm rounded-md flex flex-row justify-between items-center text-slate-800 border-slate-200">
+          <p>
             Retrouve la facture de mon dernier achat.
           </p>
           <HiBolt />
         </div>
-        <div className="w-full border border-slate-100 px-4 py-4 text-sm rounded-md flex flex-row justify-between items-center	 bg-white border-slate-900">
-          <p className="text-slate-600">
+        <div className="w-full border px-4 py-4 bg-slate-50 text-sm rounded-md flex flex-row justify-between items-center text-slate-800 border-slate-200">
+          <p>
             Quelles sont mes dépenses du mois par catégories ?
           </p>
           <HiBolt />
         </div>
-        <div className="w-full border border-slate-100 px-4 py-4 text-sm rounded-md flex flex-row justify-between items-center	 bg-white border-slate-900">
-          <p className="text-slate-600">
+        <div className="w-full border px-4 py-4 bg-slate-50 text-sm rounded-md flex flex-row justify-between items-center text-slate-800 border-slate-200">
+          <p>
             Comment puis-je économiser de l’argent sur mes dépenses ?
           </p>
           <HiBolt />
