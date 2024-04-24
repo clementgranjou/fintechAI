@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import LogoutButton from "../components/Logout";
 
 export default function Account() {
   return (
@@ -40,7 +41,7 @@ export default function Account() {
           <h1 className="text-sm text-slate-600">20/11/1989</h1>
         </div>
       </div>
-      <Button>Modifier</Button>
+      <LogoutButton></LogoutButton>
     </div>
   );
 }

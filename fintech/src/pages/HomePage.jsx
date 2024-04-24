@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import LogoutButton from "../components/Logout";
+
+
 
 // shadcn components
 import {
@@ -93,7 +94,7 @@ export default function Home() {
           <h3 className="text-slate-800 font-medium">Suivi des opérations</h3>
           <HiMiniAdjustmentsHorizontal />
         </div>
-        <Button className="w-full flex justify-between bg-slate-200 text-slate-800 hover:text-slate-200 font-normal">Dashboard d'analyse<HiMiniCursorArrowRays/></Button>
+        <Button className="w-full flex justify-between bg-slate-800 text-slate-200 hover:text-slate-200 font-normal">Dashboard d'analyse<HiMiniCursorArrowRays/></Button>
       </div>
 
       <Table>
@@ -122,7 +123,6 @@ export default function Home() {
           ))}
         </TableBody>
       </Table>
-      <LogoutButton></LogoutButton>
     </div>
   );
 }
