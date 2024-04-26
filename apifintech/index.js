@@ -1,14 +1,14 @@
 const express = require('express')
 const app = express()
 const port = 3001
-const authRoutes = require('./routes/auth');
+// const authRoutes = require('./routes/auth');
 
 
 const transactions_model = require('./models/transactions_model')
 
 app.use(express.json())
 
-app.use('/api/auth', authRoutes);
+// app.use('/api/auth', authRoutes);
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
