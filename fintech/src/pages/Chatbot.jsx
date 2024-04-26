@@ -1,7 +1,8 @@
 import React from "react";
 
 // Icons form react icons
-import { HiBolt } from "react-icons/hi2";
+import { HiOutlineChatAlt2 } from "react-icons/hi";
+
 
 // shadcn components import
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -21,19 +22,19 @@ export default function Chatbot() {
           <p>
             Retrouve la facture de mon dernier achat.
           </p>
-          <HiBolt />
+          <HiOutlineChatAlt2 />
         </div>
         <div className="w-full border px-4 py-4 bg-slate-50 text-sm rounded-md flex flex-row justify-between items-center text-slate-800 border-slate-200">
           <p>
             Quelles sont mes dépenses du mois par catégories ?
           </p>
-          <HiBolt />
+          <HiOutlineChatAlt2 />
         </div>
         <div className="w-full border px-4 py-4 bg-slate-50 text-sm rounded-md flex flex-row justify-between items-center text-slate-800 border-slate-200">
           <p>
             Comment puis-je économiser de l’argent sur mes dépenses ?
           </p>
-          <HiBolt />
+          <HiOutlineChatAlt2 />
         </div>
       </div>
     </div>

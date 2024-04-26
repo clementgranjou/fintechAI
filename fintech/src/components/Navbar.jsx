@@ -1,18 +1,19 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { HiBolt, HiChatBubbleLeftRight, HiHome } from "react-icons/hi2";
+import { HiOutlineUserCircle, HiOutlineChatAlt, HiOutlineHome } from "react-icons/hi";
+
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <Link className="navItem" to="/">
-        <HiHome className="navbaricon" />
+        <HiOutlineHome className="navbaricon" />
       </Link>
       <Link className="navItem" to="/Chatbot">
-        <HiChatBubbleLeftRight className="navbaricon" />
+        <HiOutlineChatAlt className="navbaricon" />
       </Link>
       <Link className="navItem" to="/Account">
-        <HiBolt className="navbaricon" />
+        <HiOutlineUserCircle className="navbaricon" />
       </Link>
     </nav>
   );

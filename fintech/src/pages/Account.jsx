@@ -13,20 +13,20 @@ export default function Account() {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <h1 className="title text-slate-800">Clément Granjou</h1>
-        <h1 className="text-sm text-slate-600">Email.test@epitech.digital</h1>
+        <h1 className="text-sm text-slate-600">clement.granjou@epitech.digital</h1>
       </div>
       <div className="All grid gap-6 px-4">
         <div className="item flex flex-row justify-between">
           <h1 className="text-sm font-medium text-slate-800">
             Date de naissance
           </h1>
-          <h1 className="text-sm text-slate-600">20/11/1989</h1>
+          <h1 className="text-sm text-slate-600">23/10/2002</h1>
         </div>
         <div className="item flex flex-row justify-between">
           <h1 className="text-sm font-medium text-slate-800">
-            Date de naissance
+            Création du compte
           </h1>
-          <h1 className="text-sm text-slate-600">20/11/1989</h1>
+          <h1 className="text-sm text-slate-600">20/04/2024</h1>
         </div>
         <div className="item flex flex-row justify-between">
           <h1 className="text-sm font-medium text-slate-800">

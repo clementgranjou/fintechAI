@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import MyPieChart from "@/components/charts/PieChart";
 
 //react icons
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -12,7 +13,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -43,6 +43,7 @@ export default function Dashboard() {
       <h1 className="font-medium text-sm text-slate-800">
         Répartition des dépenses
       </h1>
+      <MyPieChart/>
       <Card className="bg-slate-50">
         <CardHeader>
           <CardTitle className="text-md">Indice de gestion</CardTitle>
