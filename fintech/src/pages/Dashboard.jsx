@@ -32,7 +32,7 @@ export default function Dashboard() {
           onClick={redirectToHome}
           className="headerleft flex flex-row items-center"
         >
-          <HiChevronLeft />
+          <HiChevronLeft className="navItem" />
           <h1 className="title text-slate-800">Dashboard d’analyse 📊</h1>
         </div>
         <Avatar>
