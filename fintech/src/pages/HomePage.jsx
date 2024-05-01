@@ -21,8 +21,6 @@ import {
 } from "react-icons/hi2";
 
 export default function Home() {
-
-
   const navigate = useNavigate();
 
   const redirectToDashboard = () => {
@@ -81,10 +79,8 @@ export default function Home() {
     });
   }
 
-  
-
   return (
-    <div className="container grid gap-8">
+    <div className="container grid gap-8 mb-24">
       <div className="header">
         <h1 className="title text-slate-800">Hi Clément 👋</h1>
         <Avatar>
@@ -104,7 +100,7 @@ export default function Home() {
           <HiMiniAdjustmentsHorizontal />
         </div>
         <Button
-          className="w-full flex justify-between bg-slate-800 text-slate-200 hover:text-slate-200 font-normal"
+          className="w-full flex justify-between bg-purple-700 text-slate-200 hover:text-slate-200 font-normal"
           onClick={redirectToDashboard} // Ajoutez l'écouteur d'événements onClick ici
         >
           Dashboard d'analyse
@@ -119,24 +115,20 @@ export default function Home() {
             <TableHead>Amount</TableHead>
             <TableHead>Date</TableHead>
             <TableHead>Status</TableHead>
-            <TableHead>Description</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {transactions.map((transaction) => (
             <TableRow key={transaction.transactionid}>
               <TableCell className="text-sm font-bold">
-                {transaction.transactionid}
+                {transaction.transaction_id}
               </TableCell>
-              <TableCell className="text-sm">{transaction.amount}USD</TableCell>
+              <TableCell className="text-sm">{transaction.amount}$</TableCell>
               <TableCell className="text-sm">
-                {formatDate(transaction.transactiondate)}
+                {transaction.payment_type}
               </TableCell>
               <TableCell>
-                <Badge variant="outline">{transaction.statut}</Badge>
-              </TableCell>
-              <TableCell className="text-sm">
-                {transaction.description}
+                <Badge variant="outline">{transaction.product_category}</Badge>
               </TableCell>
             </TableRow>
           ))}

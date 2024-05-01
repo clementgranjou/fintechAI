@@ -7,7 +7,6 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { HiChevronLeft } from "react-icons/hi";
 import { HiLightBulb } from "react-icons/hi";
 
-
 // shadcn
 import {
   Card,
@@ -26,7 +25,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="container h-full grid gap-8">
+    <div className="container h-full grid gap-8 mb-32">
       <div className="header">
         <div
           onClick={redirectToHome}
@@ -40,9 +39,10 @@ export default function Dashboard() {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
-      <h1 className="font-medium text-sm text-slate-800">
-        Répartition des dépenses
-      </h1>
+      <CardTitle className="font-medium text-sm text-slate-800">
+        Répartition des dépenses par statut
+      </CardTitle>
+      <CardDescription>Veillez à avoir les fonds nécessaires pour payer les transactions qui ne sont pas encore débités</CardDescription>
       <MyPieChart/>
       <Card className="bg-slate-50">
         <CardHeader>

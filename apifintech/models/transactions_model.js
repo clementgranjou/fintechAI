@@ -9,7 +9,7 @@ const pool = new Pool({
 
 const getTransactions = () => {
     return new Promise(function(resolve, reject) {
-      pool.query('SELECT * FROM transactions ORDER BY transactionid ASC', (error, results) => {
+      pool.query('SELECT * FROM transactions ORDER BY transaction_id ASC', (error, results) => {
         if (error) {
           reject(error)
         }

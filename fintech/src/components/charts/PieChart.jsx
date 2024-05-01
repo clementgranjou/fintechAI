@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Tooltip, Legend, Cell } from 'recharts';
 import axios from 'axios';
 
-const COLORS = ['#444444', '#F7C4EC', '#FFBB28', '#FF8042'];
+const COLORS = ['#444444', '#F7C4EC', '#BFBFBF', '#BFBFBF'];
 
 function MyPieChart() {
     const [data, setData] = useState([]);
@@ -28,9 +28,9 @@ function MyPieChart() {
             return []; // Retourne un tableau vide si les données ne sont pas un tableau
         }
     
-        const sums = transactions.reduce((acc, { statut, amount }) => {
-            if (!statut || (typeof amount !== 'number' && typeof amount !== 'string')) {
-                console.error("Transaction invalide:", { statut, amount });
+        const sums = transactions.reduce((acc, { product_category, amount }) => {
+            if (!product_category || (typeof amount !== 'number' && typeof amount !== 'string')) {
+                console.error("Transaction invalide:", { product_category, amount });
                 return acc;
             }
             let numericAmount = parseFloat(amount);
@@ -38,11 +38,11 @@ function MyPieChart() {
                 console.error("Montant invalide, doit être un nombre:", amount);
                 return acc;
             }
-            acc[statut] = (acc[statut] || 0) + numericAmount;
+            acc[product_category] = (acc[product_category] || 0) + numericAmount;
             return acc;
         }, {});
     
-        const result = Object.keys(sums).map(key => ({ name: key, value: sums[key] }));
+        const result = Object.keys(sums).map(key => ({ name: key, value: sums[key]}));
         return result;
     }
     
