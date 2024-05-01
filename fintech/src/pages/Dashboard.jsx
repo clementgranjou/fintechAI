@@ -7,6 +7,9 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { HiChevronLeft } from "react-icons/hi";
 import { HiLightBulb } from "react-icons/hi";
 
+// images
+import Linearreg1 from '@/assets/Linearreg1.jpg';
+
 // shadcn
 import {
   Card,
@@ -56,6 +59,7 @@ export default function Dashboard() {
         <Button className="w-full bg-purple-700">Conseillez-moi<HiLightBulb/></Button>
         </div>
       </Card>
+      <img src={Linearreg1} alt="Dépenses par Mois avec Prédiction" />
     </div>
   );
 }
