@@ -1,0 +1,27 @@
+{
+  "name": "apifintech",
+  "version": "1.0.0",
+  "description": "package api fintech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clementgranjou/fintechAI.git"
+  },
+  "author": "Clem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clementgranjou/fintechAI/issues"
+  },
+  "homepage": "https://github.com/clementgranjou/fintechAI#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.5"
+  }
+}
