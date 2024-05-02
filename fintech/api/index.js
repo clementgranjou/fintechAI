@@ -27,6 +27,7 @@ app.post("/api/message", async (req, res) => {
         {
           headers: {
             Authorization:
+            "Bearer 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",
             "Content-Type": "application/json",
             Accept: "application/json",
           },
