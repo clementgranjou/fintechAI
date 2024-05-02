@@ -73,7 +73,7 @@ export default function Chatbot() {
           </div>
         </div>
       </div>
-      <Input value={message} onChange={handleInputChange} />
+      <Input placeholder="ex. Comment économiser mon argent ?" value={message} onChange={handleInputChange} />
       <Button onClick={handleSubmit}>Envoyer</Button>
       <div>
        {/*  {responses.map((resp, index) => (

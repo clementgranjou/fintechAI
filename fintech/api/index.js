@@ -10,26 +10,9 @@ app.use(cors());
 const axios = require("axios");
 
 
-// const authRoutes = require('./routes/auth');
-/* const {Configuration, OpenAIApi} = require('openai'); */
 
-/* const config = new Configuration({
-  apiKey:"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",
-})
-
-const openai = new OpenAIApi(config);
- */
 app.post("/api/message", async (req, res) => {
   const { message } = req.body;
-
-  /*   const response = await openai.createCompletion({
-    model:'text-davinci-003',
-    prompt: message,
-    temperature: 0.7,
-    max_tokens: 150
-  });
-
-  res.send(response.data.choices[0].text); */
 
   async function callOpenAI(message) {
     try {
@@ -67,17 +50,6 @@ app.post("/api/message", async (req, res) => {
 
 const transactions_model = require("./models/transactions_model");
 
-// app.use('/api/auth', authRoutes);
-
-/* app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3001");
-  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Access-Control-Allow-Headers"
-  );
-  next();
-}); */
 
 app.get("/transactions", (req, res) => {
   transactions_model
