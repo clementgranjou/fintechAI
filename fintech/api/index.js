@@ -44,7 +44,7 @@ app.post("/api/message", async (req, res) => {
         {
           headers: {
             Authorization:
-              "Bearer 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",
+              "Bearer " + process.env.OPENAI_API_KEY,
             "Content-Type": "application/json",
             Accept: "application/json",
           },
