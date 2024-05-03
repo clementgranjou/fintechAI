@@ -1,4 +1,4 @@
-# FinAIssist
+# MoonAI
 
 ## Description
 FinAIssist est votre assistant financier personnel propulsé par l'intelligence artificielle. Ce projet vise à simplifier la gestion des finances personnelles à travers l'automatisation du suivi des dépenses, l'analyse financière personnalisée, et la planification budgétaire intelligente.
@@ -20,13 +20,19 @@ Assurez-vous d'avoir `node.js` installé sur votre machine.
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/votre-username/FinAIssist.git
+git clone https://github.com/votre-username/fintechAI.git
 
 # Aller dans le dossier du projet
-cd FinAIssist
+cd fintechAI
+cd fintech
 
 # Installer les dépendances
 npm install
 
 # Lancer l'application en mode développement
 npm run dev
+
+
+# Lancer le backend
+cd fintechAI/api
+node index.js
